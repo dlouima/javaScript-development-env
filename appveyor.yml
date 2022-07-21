@@ -1,21 +1,21 @@
 #test again this version of Node.js
 
 environment:
-matrix:
+    matrix:
 #node.js
--nodejs_version "14"
+    -nodejs_version "14"
 
 #Install script
 install:
--ps: Install-Product node $env:nodejs_version
+    -ps: Install-Product node $env:nodejs_version
 
--npm install
+    - npm install
 
 test_script:
--node --version
--npm --version
+    -node --version
+    -npm --version
 
--npm test
+    -npm test
 
 
 build:off
