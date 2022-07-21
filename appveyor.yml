@@ -3,11 +3,11 @@
 environment:
 matrix:
 #node.js
--nodejs_version "16"
+-nodejs_version "14"
 
 #Install script
 install:
--ps: install-Product node $env:nodejs_version
+-ps: Install-Product node $env:nodejs_version
 
 -npm install
 
