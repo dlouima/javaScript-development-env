@@ -9,12 +9,12 @@ describe("our fist test", () => {
 });
 
 describe("index.html", () => {
-    it("should say hello", () => {
+    it("users", () => {
         const index = fs.readFileSync("./src/index.html", "utf-8");
         const { JSDOM } = jsdom;
         const dom = new JSDOM(index);
         const h1 = dom.window.document.getElementsByTagName("h1")[0];
-        expect(h1.innerHTML).to.equal("Hello world");
+        expect(h1.innerHTML).to.equal("Users");
         dom.window.close();
     });
 });
